@@ -4,10 +4,11 @@ import { HomeScreen } from '@/components/HomeScreen';
 import { TripSummaryScreen } from '@/components/TripSummaryScreen';
 import { HistoryScreen } from '@/components/HistoryScreen';
 import { SettingsScreen } from '@/components/SettingsScreen';
+import { AnalyticsScreen } from '@/components/AnalyticsScreen';
 import { Navbar } from '@/components/Navbar';
 import { storageService } from '@/services/storage';
 
-type Screen = 'welcome' | 'home' | 'trip' | 'history' | 'settings';
+type Screen = 'welcome' | 'home' | 'trip' | 'history' | 'settings' | 'analytics';
 
 const Index = () => {
   const [currentScreen, setCurrentScreen] = useState<Screen>('welcome');
@@ -30,7 +31,7 @@ const Index = () => {
     setCurrentScreen('home');
   };
 
-  const handleNavigate = (screen: 'home' | 'trip' | 'history' | 'settings') => {
+  const handleNavigate = (screen: 'home' | 'trip' | 'history' | 'settings' | 'analytics') => {
     setCurrentScreen(screen);
   };
 
@@ -64,6 +65,8 @@ const Index = () => {
         return <TripSummaryScreen onBack={handleBackToHome} />;
       case 'history':
         return <HistoryScreen onBack={handleBackToHome} onSelectTrip={handleSelectTrip} />;
+      case 'analytics':
+        return <AnalyticsScreen onBack={handleBackToHome} />;
       case 'settings':
         return <SettingsScreen onBack={handleBackToHome} />;
       default:

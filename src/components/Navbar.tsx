@@ -3,12 +3,13 @@ import {
   Home, 
   History, 
   TrendingUp, 
-  Settings
+  Settings,
+  BarChart3
 } from 'lucide-react';
 
 interface NavbarProps {
-  currentScreen: 'welcome' | 'home' | 'trip' | 'history' | 'settings';
-  onNavigate: (screen: 'home' | 'trip' | 'history' | 'settings') => void;
+  currentScreen: 'welcome' | 'home' | 'trip' | 'history' | 'settings' | 'analytics';
+  onNavigate: (screen: 'home' | 'trip' | 'history' | 'settings' | 'analytics') => void;
 }
 
 export function Navbar({ currentScreen, onNavigate }: NavbarProps) {
@@ -16,7 +17,7 @@ export function Navbar({ currentScreen, onNavigate }: NavbarProps) {
 
   const navItems = [
     { id: 'home', icon: Home, label: 'Home' },
-    { id: 'trip', icon: TrendingUp, label: 'Trip' },
+    { id: 'analytics', icon: BarChart3, label: 'Analytics' },
     { id: 'history', icon: History, label: 'History' },
     { id: 'settings', icon: Settings, label: 'Settings' },
   ] as const;
