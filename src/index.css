@@ -8,33 +8,59 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    --background: 244 100% 99%;
+    --foreground: 235 16% 13%;
 
     --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card-foreground: 235 16% 13%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover-foreground: 235 16% 13%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    --primary: 240 100% 67%;
+    --primary-foreground: 0 0% 100%;
+    --primary-light: 240 100% 95%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    --secondary: 240 5% 96%;
+    --secondary-foreground: 235 16% 13%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    --muted: 240 5% 96%;
+    --muted-foreground: 240 4% 46%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    --accent: 145 100% 95%;
+    --accent-foreground: 145 85% 25%;
 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    --success: 145 85% 45%;
+    --success-foreground: 0 0% 100%;
+    --success-light: 145 100% 95%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --warning: 38 100% 65%;
+    --warning-foreground: 0 0% 100%;
+    --warning-light: 38 100% 95%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+    --destructive-light: 0 100% 95%;
+
+    --border: 240 6% 90%;
+    --input: 240 6% 90%;
+    --ring: 240 100% 67%;
+
+    /* DELTA Design System - Soft gradients and emotion-driven colors */
+    --gradient-primary: linear-gradient(135deg, hsl(240 100% 67%), hsl(260 100% 75%));
+    --gradient-success: linear-gradient(135deg, hsl(145 85% 45%), hsl(160 85% 55%));
+    --gradient-warning: linear-gradient(135deg, hsl(38 100% 65%), hsl(45 100% 70%));
+    --gradient-surface: linear-gradient(180deg, hsl(244 100% 99%), hsl(240 25% 98%));
+    --gradient-card: linear-gradient(145deg, hsl(0 0% 100% / 0.8), hsl(240 25% 98% / 0.6));
+    
+    /* Shadows for depth */
+    --shadow-soft: 0 2px 20px hsl(240 15% 15% / 0.05);
+    --shadow-card: 0 4px 30px hsl(240 15% 15% / 0.08);
+    --shadow-floating: 0 8px 40px hsl(240 15% 15% / 0.12);
+
+    /* Animation */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 
     --radius: 0.5rem;
 
