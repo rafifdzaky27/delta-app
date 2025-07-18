@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
 import { MapPin, ArrowRight, Timer } from 'lucide-react';
+import { RouteSetup } from './RouteSetup';
 import heroImage from '@/assets/hero-commute.jpg';
 
 interface WelcomeScreenProps {
@@ -10,14 +11,19 @@ interface WelcomeScreenProps {
 
 export function WelcomeScreen({ onComplete }: WelcomeScreenProps) {
   const [step, setStep] = useState(1);
+  const [showRouteSetup, setShowRouteSetup] = useState(false);
 
   const handleNext = () => {
     if (step < 3) {
       setStep(step + 1);
     } else {
-      onComplete();
+      setShowRouteSetup(true);
     }
   };
+
+  if (showRouteSetup) {
+    return <RouteSetup onComplete={onComplete} />;
+  }
 
   return (
     <div className="min-h-screen bg-gradient-surface flex flex-col">
@@ -129,7 +135,7 @@ export function WelcomeScreen({ onComplete }: WelcomeScreenProps) {
             className="w-full h-12 text-base font-medium"
             size="lg"
           >
-            {step === 3 ? 'Start Tracking' : 'Continue'}
+            {step === 3 ? 'Set Up Route' : 'Continue'}
             <ArrowRight className="w-4 h-4 ml-2" />
           </Button>
 
