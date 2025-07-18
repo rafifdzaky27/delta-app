@@ -66,9 +66,9 @@ export function HomeScreen({ onViewHistory, onViewTrip }: HomeScreenProps) {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-surface">
+    <div className="min-h-screen bg-gradient-surface pb-20 md:pb-6">
       {/* Header */}
-      <div className="px-6 pt-12 pb-6">
+      <div className="px-6 pt-6 pb-6">
         <div className="flex items-center justify-between mb-8">
           <div>
             <h1 className="text-2xl font-bold text-foreground">Good morning</h1>
